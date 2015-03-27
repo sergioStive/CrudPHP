@@ -7,51 +7,46 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-         <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist/bootstrap-3.2.0-dist/css/bootstrap.css">
+        <title></title>
     </head>
+    <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist/bootstrap-3.2.0-dist/css/bootstrap.css">
     <body>
-        <div class="container" style="padding-top: 1em;">
+       
+        <br><br><br>
+            <div class="container" style="padding-top: 1em;">
                <ul class="nav nav-tabs">
-                   <li class="active"><a href="Productos.php" style="text-decoration: none;">Inicio</a></li>
-                   <li><a href="Index.php" style="text-decoration: none;">Mis Productos</a></li>
+                   <li class="active"><a href="Index.php" style="text-decoration: none;">Inicio</a></li>
+                   <li><a href="Usuarios.php" style="text-decoration: none;">Registro Usuario</a></li>
+                  
 
 </ul>  
-            </div>
-        
-        <div class="container" style="padding-top: 1em;">
-           <table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt"><tr>
-                   <td><font face="verdana"><b>Código</b></font></td>
-                   <td><font face="verdana"><b>Cliente</b></font></td>
-                   <td><font face="verdana"><b>Importe</b></font></td>
-                   <td><font face="verdana"><b>Fecha</b></font></td>
-               </tr>
+            </div><br><br><br>
+           
+            <form class="form-horizontal" method="POST" action="Productos.php">
+                        <div class="form-group">
+                            <label for="usuario" class="col-sm-4 control-label">Documento</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="usuario" id="pNombres" class="form-control" 
+                                       placeholder="Ingrese Cedula" required>
+                            </div>
+                        </div>
 
-               <?php
-               $link = @mysql_connect("localhost", "root", "password")
-                       or die("Error al conectar a la base de datos.");
-               @mysql_select_db("ajpdsoft", $link)
-                       or die("Error al conectar a la base de datos.");
-
-               $query = "SELECT idProducto nombre cantidad idBodega from productos";
-               $result = mysql_query($query);
-               $numero = 0;
-               while ($row = mysql_fetch_array($result)) {
-                   echo "<tr><td width=\"25%\"><font face=\"verdana\">" .
-                   $row["idProducto"] . "</font></td>";
-                   echo "<td width=\"25%\"><font face=\"verdana\">" .
-                   $row["nombre"] . "</font></td>";
-                   echo "<td width=\"25%\"><font face=\"verdana\">" .
-                   $row["cantidad"] . "</font></td>";
-                   echo "<td width=\"25%\"><font face=\"verdana\">" .
-                   $row["idBodega"] . "</font></td></tr>";
-                   $numero++;
-               }
-               echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Número: " . $numero .
-               "</b></font></td></tr>";
-               mysql_free_result($result);
-               mysql_close($link);
-               ?>
-</table>
-        </div>
+                        <div class="form-group">
+                            <label for="clave" class="col-sm-4 control-label">Contraseña</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="clave" id="pApellidos" class="form-control" 
+                                       placeholder="Ingrese su Clave" required>
+                            </div>
+                        </div>
+                <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-10">
+                                <input type="submit" name="Ingresar" class="btn btn-success" 
+                                       value="Registrar">
+                            </div>
+                        </div>
+                    </form>
+                
+ <?php
+        ?>
     </body>
 </html>

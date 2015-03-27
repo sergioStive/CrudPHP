@@ -41,8 +41,10 @@ else if(isset($_POST['listar']))
          <body><br><br><br>
             <div class="container" style="padding-top: 1em;">
                <ul class="nav nav-tabs">
-                   <li class="active"><a href="#" style="text-decoration: none;">Inicio</a></li>
-                   <li><a href="Index.php" style="text-decoration: none;">Mis Productos</a></li>
+                   <li><a href="Index.php" style="text-decoration: none;">Inicio</a></li>
+                    <li class="active"><a href="#" style="text-decoration: none;">Registro Proveedor</a></li>
+                   <li><a href="Productos.php" style="text-decoration: none;">Registrar Productos</a></li>
+                   <li><a href="Solicitudes.php" style="text-decoration: none;">Registrar Solicitud</a></li>
 
 </ul>  
             </div><br><br><br>
@@ -75,8 +77,7 @@ else if(isset($_POST['listar']))
             <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-10">
             <input type="submit" name="registrar" value="Registrar" class="btn btn-success" >
-            <input type="submit" name="listar" value="Litar" class="btn btn-success" >
-             <input type="submit" name="eliminar" value="Eliminar" class="btn btn-success" >
+            
 
    </div>
                         </div>

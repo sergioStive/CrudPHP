@@ -31,8 +31,10 @@ else if(isset($_POST['actualizar']))
         <body><br><br><br>
             <div class="container" style="padding-top: 1em;">
                <ul class="nav nav-tabs">
-                   <li class="active"><a href="#" style="text-decoration: none;">Inicio</a></li>
-                   <li><a href="Index.php" style="text-decoration: none;">Mis Productos</a></li>
+                   <li><a href="Index.php" style="text-decoration: none;">Inicio</a></li>
+                   <li><a href="Proveedores.php" style="text-decoration: none;">Registrar Proveedor</a></li>
+                    <li  class="active"><a href="" style="text-decoration: none;">Registro Productos</a></li>
+                    <li><a href="Solicitudes.php" style="text-decoration: none;">Registrar Solicitud</a></li>
 
 </ul>  
             </div><br><br><br>
