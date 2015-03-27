@@ -28,7 +28,8 @@ else if(isset($_POST['actualizar']))
 
             <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist/bootstrap-3.2.0-dist/css/bootstrap.css">
         </head>
-        <body><br><br><br>
+        <body>
+        <center><h1>registro de usuarios</h1></center>       
             <div class="container" style="padding-top: 1em;">
                <ul class="nav nav-tabs">
                    <li><a href="Index.php" style="text-decoration: none;">Inicio</a></li>
