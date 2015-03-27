@@ -32,7 +32,7 @@ else if(isset($_POST['actualizar']))
                <ul class="nav nav-tabs">
                    <li><a href="Index.php" style="text-decoration: none;">Inicio</a></li>
                    <li><a href="Proveedores.php" style="text-decoration: none;">Registrar Proveedor</a></li>
-                    <li class="active"><a href="" style="text-decoration: none;">Registrar Solicitud</a></li>
+                    <li class="active"><a href="" style="text-decoration: none;">Registrar Solicitudes</a></li>
                     <li><a href="" style="text-decoration: none;">Registro Productos</a></li>
 
 </ul>  
