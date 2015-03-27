@@ -4,49 +4,53 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist/bootstrap-3.2.0-dist/css/bootstrap.css">
-    <body>
-       
-        <br><br><br>
-            <div class="container" style="padding-top: 1em;">
-               <ul class="nav nav-tabs">
-                   <li class="active"><a href="Index.php" style="text-decoration: none;">Inicio</a></li>
-                   <li><a href="Usuarios.php" style="text-decoration: none;">Registro Usuario</a></li>
-                  
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
 
-</ul>  
-            </div><br><br><br>
-           
-            <form class="form-horizontal" method="POST" action="Productos.php">
-                        <div class="form-group">
-                            <label for="usuario" class="col-sm-4 control-label">Documento</label>
-                            <div class="col-sm-8">
-                                <input type="text" name="usuario" id="pNombres" class="form-control" 
-                                       placeholder="Ingrese Cedula" required>
-                            </div>
-                        </div>
+    <title>Login</title>
 
-                        <div class="form-group">
-                            <label for="clave" class="col-sm-4 control-label">Contraseña</label>
-                            <div class="col-sm-8">
-                                <input type="text" name="clave" id="pApellidos" class="form-control" 
-                                       placeholder="Ingrese su Clave" required>
-                            </div>
-                        </div>
-                <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-10">
-                                <input type="submit" name="Ingresar" class="btn btn-success" 
-                                       value="Registrar">
-                            </div>
-                        </div>
-                    </form>
-                
- <?php
-        ?>
-    </body>
+    <link href="bootstrap-3.2.0-dist/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+    <link href="bootstrap-3.2.0-dist/signin.css" rel="stylesheet">
+
+
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+        <form class="form-signin" action="checklogin.php" method="post">
+        <h2 class="form-signin-heading">Ingreso</h2>
+        
+        <label for="" class="sr-only">UsernName</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+        
+        
+        <label for="" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
+        
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" value="Entrar"type="submit">Ingresar</button>
+      </form>
+
+    </div>
+
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
+
