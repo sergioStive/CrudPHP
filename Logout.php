@@ -5,7 +5,7 @@
 
  
 
-    header('location: index.php');
+    header('location: index2.php');
 
 ?>
 

@@ -1,9 +1,7 @@
 <?php
- session_start(); //session_start() crea una sesión para ser usada mediante una petición GET o POST, o pasado por una cookie 
+ session_start(); 
 
-include_once "datos/conexion.php"; //es la sentencia q usaremos para incluir el archivo de conexión a la base de datos que creamos anteriormente.
-
-/*Función verificar_login() --> Vamos a crear una función llamada verificar_login, esta se encargara de hacer una consulta a la base de datos para saber si el usuario ingresado es correcto o no.*/
+include_once "datos/conexion.php"; 
 
 
 
@@ -11,7 +9,7 @@ function verificar_login($user,$password,&$result)
 
     {
 
-        $sql =( "SELECT * FROM usuarios WHERE usuario = ‘$user’ and ‘$password’ = ‘$password’”");
+        $sql =( "SELECT * FROM usuarios WHERE idusuario = ‘$user’ and ‘$password’ = ‘$password’”");
 
         $rec = mysql_query($sql);
 
@@ -94,7 +92,6 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
 
 } else {
 
-    // Si la variable de sesión ‘userid’ ya existe, que muestre el mensaje de saludo.
 
     echo 'Su usuario ingreso correctamente.';
 
